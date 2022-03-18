@@ -10,12 +10,19 @@ function updateEmployeeWithKeyAndValue(employee, key, value){
 };
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
-    newObj2[key] = value; 
+    employee[key] = value; 
+    return employee;
+};
+
+function deleteFromEmployeeByKey(employee, key){
+    const newObj2 = {...employee};
+    delete newObj2.key;
     return newObj2;
 };
 
-// const destructivelyUpdateObject = updateEmployeeWithKeyAndValue(employee, key, value);
-
-
-
+function destructivelyDeleteFromEmployeeByKey(employee, key){
+    const newObj3 = { ...employee };
+    delete newObj3[key]
+    return newObj3;
+};
 
