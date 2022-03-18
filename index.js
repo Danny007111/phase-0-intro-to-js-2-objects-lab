@@ -4,8 +4,17 @@ const employee = {
 };
 
 function updateEmployeeWithKeyAndValue(employee, key, value){
-    const destructivelyUpdateObject = updateEmployeeWithKeyAndValue(employee, "Nayeli", "Washtenaw");
+    const newObj = { ...employee };
+    newObj[key] = value;
+    return newObj;
 };
+
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+    newObj2[key] = value; 
+    return newObj2;
+};
+
+// const destructivelyUpdateObject = updateEmployeeWithKeyAndValue(employee, key, value);
 
 
 
