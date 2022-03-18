@@ -15,14 +15,13 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
 };
 
 function deleteFromEmployeeByKey(employee, key){
-    const newObj2 = {...employee};
-    delete newObj2.key;
+    const newObj2 = { ...employee };
+    delete newObj2[key] 
     return newObj2;
 };
 
 function destructivelyDeleteFromEmployeeByKey(employee, key){
-    const newObj3 = { ...employee };
-    delete newObj3[key]
-    return newObj3;
+    delete employee[key]
+    return employee;
 };
 
